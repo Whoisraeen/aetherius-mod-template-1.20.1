@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "aetherius-mod",
+	"version": "${version}",
+	"name": "Aetherius Mod",
+	"description": "Mod for Aetherius MMORPG",
+	"authors": [
+		"Raeen"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/aetherius-mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.raeen.aetheriusmod.AetheriusMod"
+		],
+		"client": [
+			"net.raeen.aetheriusmod.AetheriusModClient"
+		],
+		"fabric-datagen": [
+			"net.raeen.aetheriusmod.AetheriusModDataGenerator"
+		]
+	},
+	"mixins": [
+		"aetherius-mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
